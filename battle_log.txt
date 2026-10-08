@@ -1,11 +1,11 @@
 |init|battle
-|title|zismanshd vs. kerbeus069
+|title|zismanshd vs. 
 |j|☆zismanshd
 |j|☆kerbeus069
 |t:|1791473611
 |gametype|singles
 |player|p1|zismanshd|fisherman-gen4|1446
-|player|p2|kerbeus069|170|1398
+|player|p2||170|1398
 |gen|9
 |tier|[Gen 9] Random Battle
 |rated|

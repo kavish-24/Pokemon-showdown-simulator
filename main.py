@@ -6,8 +6,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 import time
 
-USERNAME = "kerbeus069"
-PASSWORD = "zekrom21"
+USERNAME = 
+PASSWORD =
 
 # Optional: keep browser open after script ends
 options = Options()
