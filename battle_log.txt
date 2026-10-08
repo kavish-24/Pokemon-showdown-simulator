@@ -1,0 +1,65 @@
+|init|battle
+|title|zismanshd vs. kerbeus069
+|j|☆zismanshd
+|j|☆kerbeus069
+|t:|1791473611
+|gametype|singles
+|player|p1|zismanshd|fisherman-gen4|1446
+|player|p2|kerbeus069|170|1398
+|gen|9
+|tier|[Gen 9] Random Battle
+|rated|
+|rule|Species Clause: Limit one of each Pokémon
+|rule|HP Percentage Mod: HP is shown in percentages
+|rule|Sleep Clause Mod: Limit one foe put to sleep
+|rule|Illusion Level Mod: Illusion disguises the Pokémon's true level
+|
+|t:|1791473611
+|teamsize|p1|6
+|teamsize|p2|6
+|start
+|switch|p1a: Meowstic|Meowstic, L89, M|100/100
+|switch|p2a: Fezandipiti|Fezandipiti, L82, M|100/100
+|turn|1
+|inactive|Battle timer is ON: inactive players will automatically lose when time's up. (requested by zismanshd)
+|
+|t:|1791473635
+|switch|p2a: Sableye|Sableye, L87, M|100/100
+|move|p1a: Meowstic|Reflect|p1a: Meowstic
+|-sidestart|p1: zismanshd|Reflect
+|
+|upkeep
+|turn|2
+|
+|t:|1791473647
+|move|p1a: Meowstic|Yawn|p2a: Sableye
+|-hint|Since gen 7, Dark is immune to Prankster moves.
+|-immune|p2a: Sableye
+|move|p2a: Sableye|Encore|p1a: Meowstic
+|-start|p1a: Meowstic|Encore
+|
+|upkeep
+|turn|3
+|
+|t:|1791473663
+|switch|p1a: Skuntank|Skuntank, L84, M|100/100
+|move|p2a: Sableye|Knock Off|p1a: Skuntank
+|-resisted|p1a: Skuntank
+|-damage|p1a: Skuntank|92/100
+|-enditem|p1a: Skuntank|Life Orb|[from] move: Knock Off|[of] p2a: Sableye
+|
+|upkeep
+|turn|4
+|
+|t:|1791473685
+|move|p2a: Sableye|Will-O-Wisp|p1a: Skuntank
+|-hint|Since gen 7, Dark is immune to Prankster moves.
+|-immune|p1a: Skuntank
+|move|p1a: Skuntank|Knock Off|p2a: Sableye
+|-damage|p2a: Sableye|55/100
+|-enditem|p2a: Sableye|Leftovers|[from] move: Knock Off|[of] p1a: Skuntank
+|
+|upkeep
+|turn|5
+
+|request|{"active":[{"moves":[{"move":"Encore","id":"encore","pp":7,"maxpp":8,"target":"normal","disabled":false},{"move":"Will-O-Wisp","id":"willowisp","pp":23,"maxpp":24,"target":"normal","disabled":false},{"move":"Recover","id":"recover","pp":8,"maxpp":8,"target":"self","disabled":false},{"move":"Knock Off","id":"knockoff","pp":31,"maxpp":32,"target":"normal","disabled":false}],"canTerastallize":"Poison"}],"side":{"name":"kerbeus069","id":"p2","pokemon":[{"ident":"p2: Sableye","details":"Sableye, L87, M","condition":"124/229","active":true,"stats":{"atk":180,"def":180,"spa":163,"spd":163,"spe":137},"moves":["encore","willowisp","recover","knockoff"],"baseAbility":"prankster","item":"","pokeball":"pokeball","ability":"prankster","commanding":false,"reviving":false,"teraType":"Poison","terastallized":""},{"ident":"p2: Wo-Chien","details":"Wo-Chien, L83","condition":"277/277","active":false,"stats":{"atk":189,"def":214,"spa":205,"spd":272,"spe":164},"moves":["protect","leechseed","ruination","knockoff"],"baseAbility":"tabletsofruin","item":"leftovers","pokeball":"pokeball","ability":"tabletsofruin","teraType":"Poison","terastallized":""},{"ident":"p2: Toxtricity","details":"Toxtricity, L82, F","condition":"257/257","active":false,"stats":{"atk":208,"def":162,"spa":234,"spd":162,"spe":170},"moves":["shiftgear","gunkshot","boomburst","overdrive"],"baseAbility":"punkrock","item":"throatspray","pokeball":"pokeball","ability":"punkrock","teraType":"Normal","terastallized":""},{"ident":"p2: Fezandipiti","details":"Fezandipiti, L82, M","condition":"278/278","active":false,"stats":{"atk":196,"def":182,"spa":162,"spd":252,"spe":210},"moves":["swordsdance","terablast","gunkshot","playrough"],"baseAbility":"toxicchain","item":"leftovers","pokeball":"pokeball","ability":"toxicchain","teraType":"Ground","terastallized":""},{"ident":"p2: Cramorant","details":"Cramorant, L86, M","condition":"261/261","active":false,"stats":{"atk":195,"def":144,"spa":195,"spd":213,"spe":195},"moves":["bravebird","surf","defog","roost"],"baseAbility":"gulpmissile","item":"heavydutyboots","pokeball":"pokeball","ability":"gulpmissile","teraType":"Ground","terastallized":""},{"ident":"p2: Medicham","details":"Medicham, L86, F","condition":"243/243","active":false,"stats":{"atk":152,"def":178,"spa":152,"spd":178,"spe":187},"moves":["icepunch","closecombat","zenheadbutt","bulletpunch"],"baseAbility":"purepower","item":"choiceband","pokeball":"pokeball","ability":"purepower","teraType":"Fighting","terastallized":""}]},"rqid":11}

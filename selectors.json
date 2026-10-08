@@ -1,0 +1,74 @@
+{
+  "login_username": [
+    "input[name=\"username\"]",
+    "input[placeholder=\"Username:\"]"
+  ],
+  "login_password": [
+    "input[type=\"password\"]",
+    "input[name=\"password\"]"
+  ],
+  "login_button": [
+    "button[name=\"login\"]",
+    "button:has-text(\"Log in\")"
+  ],
+  "format_selector": [
+    "select[name=\"format\"]",
+    "select.format"
+  ],
+  "battle_button": [
+    "button[name=\"search\"]",
+    "button:has-text(\"Battle!\")"
+  ],
+  "battle_chat_input": [
+    "textarea[name=\"chat\"]",
+    ".battle-log-add textarea"
+  ],
+  "move_buttons": [
+    "button[name=\"chooseMove\"]",
+    "button.movebutton"
+  ],
+  "switch_buttons": [
+    "button[name=\"chooseSwitch\"]",
+    "button[data-tooltip^=\"switchpokemon|\"]"
+  ],
+  "terastallize_checkbox": [
+    "input[name=\"terastallize\"]",
+    "input[type=\"checkbox\"]"
+  ],
+  "confirm_buttons": [
+    "button[name=\"chooseMove\"]",
+    "button:has-text(\"Confirm\")"
+  ],
+  "leave_battle_buttons": [
+    "button[name=\"closeRoom\"]",
+    "button:has-text(\"Forfeit\"), button:has-text(\"Leave\")"
+  ],
+  "play_again_buttons": [
+    "button[name=\"rematch\"]",
+    "button:has-text(\"Play again\")"
+  ],
+  "battle_timer": [
+    "button[name=\"openTimer\"]",
+    "button.timerbutton"
+  ],
+  "battle_log": [
+    "[role=\"log\"]",
+    ".battle-log"
+  ],
+  "forced_switch_prompt": [
+    ".controls .switchcontrols",
+    "button[name=\"chooseSwitch\"]"
+  ],
+  "active_pokemon": [
+    ".battle .side .pokemon.active",
+    "[aria-label=\"Active Pokémon\"]"
+  ],
+  "fainted_pokemon": [
+    ".teamicons .fainted",
+    "[class*=\"fainted\"]"
+  ],
+  "terastallized_pokemon": [
+    "img[alt^=\"Tera-\"]",
+    ".pokemon .terastallized"
+  ]
+}

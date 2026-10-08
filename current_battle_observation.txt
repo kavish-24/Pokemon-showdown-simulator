@@ -1,0 +1,44 @@
+Battle: [Gen 9] Random Battle
+URL: https://play.pokemonshowdown.com/battle-gen9randombattle-2695040708-ni3mylinf7bb772nhvn8e6bk81euthfpw
+Players: kerbeus069 vs. fabledied
+Observation mode: passive; no battle controls clicked by the observer
+
+Confirmed events from the rendered battle log:
+
+The opposing Landorus's Intimidate
+Hypno's Attack fell!
+
+(Hypno has Terastallized into the Fairy-type!)
+
+The opposing Piloswine fainted!
+fabledied sent out Landorus (Landorus-Therian)
+The opposing Landorus's Intimidate
+Drednaw's Attack fell!
+Drednaw returned its stats to normal using its White Herb!
+
+Drednaw fainted!
+Go! Gurdurr!
+
+kerbeus069 has 120 seconds left.
+(The opposing Landorus has Terastallized into the Ground-type!)
+The opposing Landorus used Earthquake!
+(Gurdurr lost 38.2% of its health!)
+Gurdurr used Drain Punch!
+(The opposing Landorus lost 36% of its health!)
+The opposing Landorus had its energy drained!
+
+State at observation:
+- Turn 10
+- Timer active; rendered countdown was about 2:04
+- My active Pokémon: Gurdurr, 79% HP
+- Opponent active Pokémon: Landorus-Therian, 64% HP, Tera Ground
+- My fainted Pokémon: Drednaw
+- Opponent fainted Pokémon: Piloswine
+- My earlier Tera: Hypno -> Fairy
+- Opponent Tera: Landorus -> Ground
+- Forced-switch state after Drednaw fainted: "Switch Drednaw to:"
+- No action was submitted by the observer
+
+Note:
+This file records exact rendered log text. It is not a raw WebSocket capture because
+the WebSocket was already open before passive observation began.
