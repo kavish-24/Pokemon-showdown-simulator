@@ -1,0 +1,23 @@
+choose_username:
+  - 'button[name="login"]'
+  - 'button:has-text("Choose username")'
+  - 'button:has-text("Choose name")'
+choose_username_submit:
+  - '.ps-overlay:visible button[name="login"]'
+  - '.ps-overlay:visible button:has-text("Choose username")'
+  - '.ps-overlay:visible button:has-text("Choose name")'
+login_username:
+  - '.ps-overlay input[name="username"]'
+  - '.ps-overlay input[placeholder="Username:"]'
+  - 'input[name="username"]'
+  - 'input[placeholder="Username:"]'
+login_password:
+  - '.ps-overlay input[type="password"]'
+  - '.ps-overlay input[name="password"]'
+  - 'input[type="password"]'
+  - 'input[name="password"]'
+login_button:
+  - '.ps-overlay:visible button:has-text("Log in")'
+  - '.ps-overlay:visible button[name="login"]'
+  - 'button:has-text("Log in")'
+  - 'button[name="login"]'

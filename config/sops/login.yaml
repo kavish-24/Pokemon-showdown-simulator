@@ -1,0 +1,35 @@
+name: showdown_login
+max_attempts_per_step: 3
+steps:
+  - id: open_login
+    goal: Login dialog is open
+    hint: Click the visible Choose name button.
+    allowed_actions: [click_element]
+    done_when: "visible:input[name=\"username\"]"
+    target: choose_username
+  - id: enter_username
+    goal: Username has been entered
+    hint: Fill the username with POKEMON_SHOWDOWN_USERNAME, then click the visible Choose name button.
+    allowed_actions: [fill_secret]
+    done_when: "value_present:input[name=\"username\"]"
+    target: login_username
+    secret: POKEMON_SHOWDOWN_USERNAME
+  - id: submit_username
+    goal: Username has been submitted and the password dialog is open
+    hint: Click the visible Choose name button again. This is the submit control for the username.
+    allowed_actions: [click_element]
+    done_when: "visible:input[type=\"password\"]"
+    target: choose_username_submit
+  - id: enter_password
+    goal: Password has been entered
+    hint: Fill the password with POKEMON_SHOWDOWN_PASSWORD, then click the visible login button.
+    allowed_actions: [fill_secret]
+    done_when: "value_present:input[type=\"password\"]"
+    target: login_password
+    secret: POKEMON_SHOWDOWN_PASSWORD
+  - id: submit_password
+    goal: Password has been submitted and login is complete
+    hint: Click the visible login button to submit the password.
+    allowed_actions: [click_element]
+    done_when: "gone:button[name=\"login\"]"
+    target: login_button

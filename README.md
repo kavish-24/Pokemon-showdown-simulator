@@ -40,41 +40,22 @@ The Phase 0 exit test is a 100-battle unattended run against the configured
 server. The bot chooses random legal actions supplied by `poke-env`; it does not
 infer hidden moves, items, abilities, HP, or outcomes.
 
-## Playwright automation
+## Playwright SOP automation
+
+The modular agent in [src/agent/](./src/agent/) runs the data-driven SOP in
+[config/sops/login.yaml](./config/sops/login.yaml). Code checks the DOM to
+verify each step; the LLM only selects one allowed action for the current
+step. Page text is treated as untrusted data, credentials are referenced by
+allowlisted environment-variable names, and state is saved after every
+action to `.agent/run-state.json`.
 
 The LLM API base URL defaults to
-`https://6e12-35-247-101-12.ngrok-free.app` and can be overridden with
-`LLM_API_BASE_URL`. Each request is independent and sends only a `question`
-field. The model must return a JSON object using one of these actions:
-`navigate`, `click`, `fill`, `type`, `wait`, `extract`, or `finish`.
-Selectors and URLs are validated before use. Click, fill, and type actions
-require an interactive confirmation in the terminal.
-If the model returns ordinary text instead of an action object, the workflow
-does not treat that text as success or execute it; it requests a strict action
-JSON response again until the step limit is reached.
+`https://2f61-146-148-48-224.ngrok-free.app` and can be overridden with
+`LLM_API_BASE_URL`. Each stateless request sends exactly a JSON object with a
+`question` field. Timeout, retry, invalid JSON, HTTP errors, and missing
+`answer` fields are reported as failures.
 
-Run a task with an optional initial URL:
-
-```powershell
-.\venv\Scripts\python.exe .\main.py "Find the current page title" --url https://example.com
-.\venv\Scripts\python.exe .\main.py "Search for Playwright documentation" --headed
-```
-
-Set `LLM_API_TIMEOUT_SECONDS`, `LLM_API_RETRIES`, and `AUTOMATION_MAX_STEPS`
-to tune request and workflow limits. API errors, malformed responses, and
-invalid model actions stop the workflow rather than being treated as success.
-Known site selectors are loaded from [selectors.json](./selectors.json)
-and included as selector hints in the model context. Override the file with
-`AUTOMATION_SELECTORS_FILE` when needed.
-The model is free to choose the next safe action based on the current page.
-For example, it can wait for and click the `choose_username` selector before
-filling the login fields when that button is present.
-The page context also contains a fresh `interactive_elements` catalog with
-numeric IDs and visible labels. Prefer actions such as
-`{"action":"click_element","id":7}`; IDs are recollected after each step so
-they do not become stale. Fuzzy matching is used only as a fallback for a
-text query and requires a confidence score of at least 60. No MCP tool is
-required; Playwright performs the live page lookup directly.
+Configure credentials in `.env`:
 
 For Pokémon Showdown login automation, set these values in `.env`:
 
@@ -92,10 +73,11 @@ Then run a task such as:
   --headed
 ```
 
-The model can request `fill_secret` using either configured variable name,
-but secret values are injected locally and are never sent to the LLM API or
-included in page-context logs. Login clicks and credential entry require
-terminal confirmation.
+The model can request `fill_secret` using either configured variable name, but
+secret values are injected locally and never sent to the LLM API or logs.
+Consequential browser actions require terminal confirmation. Add another SOP
+under `config/sops/` to support another workflow without changing the core
+orchestrator.
 
 ## Later phases
 
