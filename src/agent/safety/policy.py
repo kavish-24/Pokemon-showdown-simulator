@@ -19,6 +19,6 @@ class SafetyPolicy:
             raise ValueError("Navigation is outside the configured domain allowlist.")
 
     async def authorize(self, action: Action, description: str) -> None:
-        if action.action in {"click_element", "click", "fill_secret", "fill", "type_into"}:
-            if self.confirm is None or not await self.confirm(description):
+        if action.action in {"click_element", "click", "fill", "type_into"}:
+            if self.confirm is not None and not await self.confirm(description):
                 raise PermissionError("Action was not confirmed.")

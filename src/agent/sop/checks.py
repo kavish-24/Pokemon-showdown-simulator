@@ -12,7 +12,10 @@ async def visible(page: Page, argument: str) -> bool:
 
 
 async def gone(page: Page, argument: str) -> bool:
-    return await page.locator(argument).count() == 0
+    for locator in await page.locator(argument).all():
+        if await locator.is_visible():
+            return False
+    return True
 
 
 async def url_contains(page: Page, argument: str) -> bool:

@@ -27,7 +27,7 @@ class Orchestrator:
     async def run(self, task: str, url: str) -> Result:
         from src.agent.sop.loader import load_selectors, load_sop
         state_store = StateStore(self.settings.state_file)
-        state = state_store.load(task)
+        state = state_store.start_new_run(state_store.load(task))
         engine = SopEngine(load_sop(self.settings.sop_file))
         aliases = load_selectors(self.settings.selectors_file)
         policy = SafetyPolicy(self.settings.allowed_domains, self.confirm)

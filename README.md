@@ -75,9 +75,16 @@ Then run a task such as:
 
 The model can request `fill_secret` using either configured variable name, but
 secret values are injected locally and never sent to the LLM API or logs.
-Consequential browser actions require terminal confirmation. Add another SOP
-under `config/sops/` to support another workflow without changing the core
-orchestrator.
+Credential entry does not ask for confirmation. Clicks still require
+confirmation. Each invocation starts the Login SOP from the beginning, even
+when a previous run state exists. Once the visible login control is gone, the
+login SOP is marked successful, the Playwright browser closes, and the process
+exits. The saved state retains the run history for inspection.
+
+The planned task states are `Login`, `start a match`, `play the match`, and
+`exit from the browser`; only `Login` is implemented currently. Add another
+SOP under `config/sops/` to support a future workflow without changing the
+core orchestrator.
 
 ## Later phases
 

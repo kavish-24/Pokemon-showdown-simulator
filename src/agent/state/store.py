@@ -23,3 +23,13 @@ class StateStore:
         temporary = self.path.with_suffix(".tmp")
         temporary.write_text(state.model_dump_json(indent=2), encoding="utf-8")
         temporary.replace(self.path)
+
+    @staticmethod
+    def start_new_run(state: RunState) -> RunState:
+        state.completed = []
+        state.attempts = {}
+        state.status = "running"
+        state.history.append(
+            {"step": "__run__", "action": "start", "outcome": "login workflow started"}
+        )
+        return state

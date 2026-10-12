@@ -6,11 +6,11 @@
     "enter_password"
   ],
   "attempts": {
-    "submit_password": 3,
     "enter_username": 1,
     "submit_username": 1,
     "enter_password": 1,
-    "open_login": 2
+    "submit_password": 1,
+    "open_login": 3
   },
   "history": [
     {
@@ -317,7 +317,62 @@
       "step": "open_login",
       "action": "error",
       "outcome": "Target element was not found."
+    },
+    {
+      "step": "__run__",
+      "action": "start",
+      "outcome": "login workflow started"
+    },
+    {
+      "step": "__run__",
+      "action": "start",
+      "outcome": "login workflow started"
+    },
+    {
+      "step": "open_login",
+      "action": "click_element",
+      "outcome": "action completed"
+    },
+    {
+      "step": "enter_username",
+      "action": "fill_secret",
+      "outcome": "action completed"
+    },
+    {
+      "step": "submit_username",
+      "action": "click_element",
+      "outcome": "action completed"
+    },
+    {
+      "step": "open_login",
+      "action": "error",
+      "outcome": "Locator.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator(\"button[name=\\\"login\\\"]\").first\n    - locator resolved to <button name=\"login\" class=\"button\" data-agent-id=\"0\">Choose name</button>\n  - attempting click action\n    "
+    },
+    {
+      "step": "enter_password",
+      "action": "fill_secret",
+      "outcome": "action completed"
+    },
+    {
+      "step": "submit_password",
+      "action": "click_element",
+      "outcome": "action completed"
+    },
+    {
+      "step": "open_login",
+      "action": "error",
+      "outcome": "Target element was not found."
+    },
+    {
+      "step": "open_login",
+      "action": "error",
+      "outcome": "Target element was not found."
+    },
+    {
+      "step": "open_login",
+      "action": "error",
+      "outcome": "Target element was not found."
     }
   ],
-  "status": "running"
+  "status": "failed"
 }
