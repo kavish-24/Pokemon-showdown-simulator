@@ -3,6 +3,11 @@
     "input[name=\"username\"]",
     "input[placeholder=\"Username:\"]"
   ],
+  "choose_username": [
+    "button[name=\"login\"]",
+    "button:has-text(\"Choose username\")",
+    "button:has-text(\"Choose name\")"
+  ],
   "login_password": [
     "input[type=\"password\"]",
     "input[name=\"password\"]"
